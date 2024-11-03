@@ -2,11 +2,10 @@ import "./App.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import BaseUrl from './baseUrl';
 
 export default function Create() {
 
-  console.log('API URL:', process.env.REACT_APP_API_URL);
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
@@ -29,7 +28,7 @@ export default function Create() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.REACT_APP_API_URL}/create`, user)
+      .post(`${BaseUrl}/create`, user)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };

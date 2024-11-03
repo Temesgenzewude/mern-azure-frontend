@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
 
+import BaseUrl from './baseUrl';
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -9,11 +11,9 @@ function App() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
 
-  console.log('API URL:', process.env.REACT_APP_API_URL);
-
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/get-users`)
+      .get(`${BaseUrl}/get-users`)
       .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
   }, []);
