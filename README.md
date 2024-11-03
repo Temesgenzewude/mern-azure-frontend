@@ -1,3 +1,3 @@
-This is is how to deploy mern stack application to azure app service
+This is is how to deploy MERN Stack Application Frontend to Azure Static Web Apps
 
 
