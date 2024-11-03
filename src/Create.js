@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Create() {
+
+  console.log('API URL:', process.env.REACT_APP_API_URL);
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     lastName: "",
   });
+
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;

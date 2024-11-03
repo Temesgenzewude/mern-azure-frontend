@@ -9,6 +9,8 @@ function App() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
 
+  console.log('API URL:', process.env.REACT_APP_API_URL);
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/get-users`)
