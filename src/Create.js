@@ -2,7 +2,6 @@ import "./App.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import BaseUrl from './baseUrl';
 
 export default function Create() {
 
@@ -28,7 +27,7 @@ export default function Create() {
     e.preventDefault();
 
     axios
-      .post(`${BaseUrl}/create`, user)
+      .post(`${process.env.REACT_APP_API_URL}/create`, user)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
