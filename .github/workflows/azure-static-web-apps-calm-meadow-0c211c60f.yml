@@ -28,8 +28,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"              
-          output_location: "build"
-          skip_app_build: true      
+          output_location: "build"    
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
